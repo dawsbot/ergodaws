@@ -1,8 +1,3 @@
-# The OSX Friendly Version of the Default Firmware
+> The **Daws**on optimized setup for the **ergo**dox mechanical keyboard  
 
-So, I took the default firmware and just made a couple of tweaks that make it easier to use with OS X:
-
-1. The Cmd key is now on the right side, making Cmd+Space easier.
-2. The media keys work on OSX (But not on Windows).
-
-![default osx](default_osx_highres.png)
+Intended to be compiled within the original project still.
