@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|  {   |           |  }   |------+------+------+------+------+--------|
  * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|  '"  |AltShf| Left | LGui |                                       | LGui | Down | Left |Right | LGui |
+ *   |Grv/L1|  '"  |AltShf|  Alt | LGui |                                       | LGui | Down | Left |Right | LGui |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,---------------.
  *                                        |BriteD|BriteU|       | Alt  |Ctrl/Esc|
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,           KC_W,   KC_E,   KC_R,      KC_T,   KC_LPRN,
         CTL_T(KC_ESC),  LT(SYMB, KC_A), LT(MDIA, KC_S), KC_D,   KC_F,      KC_G,
         KC_LSFT,        CTL_T(KC_Z),    KC_X,   KC_C,   KC_V,      KC_B,   KC_LCBR,
-        LT(SYMB,KC_GRV),KC_QUOT,        LALT(KC_LSFT),  KC_LEFT,   KC_LGUI,
+        LT(SYMB,KC_GRV),KC_QUOT,        LALT(KC_LSFT),  KC_LALT,   KC_LGUI,
                                                         KC_SLCK,   KC_PAUS,
                                                                    KC_HOME,
                                                 KC_BSPC,KC_ENT,    KC_END,
@@ -198,10 +198,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 
 // Runs when the keyboard initializes and when power is in sleep mode
 void matrix_init_user(void) {
-    ergodox_right_led_1_on();
-    ergodox_right_led_2_on();
-    ergodox_right_led_3_on();
-    wait_ms(500);
+    wait_ms(2000);
 };
 
 // Runs constantgly in the background, in a loop.
