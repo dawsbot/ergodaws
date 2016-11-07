@@ -21,12 +21,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |L2    |  '"  | Ctrl |  Alt | LGui |                                       | LGui | Left | Down |  Up  | Right |
  *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,---------------.
- *                                        | Copy |Paste |       | Copy |  aste  |
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      |BriteU|       | PgUp |        |      |
- *                                 |Bakspc| Enter|------|       |------| Enter  |Space |
- *                                 |      |      |BriteD|       | PgDn |        |      |
+ *                                        ,-------------.       ,----------------.
+ *                                        | Copy |Paste |       |VolumeD|VolumeU |
+ *                                 ,------|------|------|       |-------+--------+------.
+ *                                 |      |      |BriteU|       | PgUp  |        |      |
+ *                                 |Bakspc| Enter|------|       |-------| Enter  |Space |
+ *                                 |      |      |BriteD|       |Ctrl+C |        |      |
  *                                 `--------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_LGUI,  KC_LEFT,   KC_DOWN,KC_UP,            KC_RIGHT,
         KC_VOLD,     KC_VOLU,
         KC_PGUP,
-        KC_PGDN,     KC_ENT,  KC_SPC
+        LCTL(KC_C),  KC_ENT,  KC_SPC
     ),
 /* Keymap 1: Symbol Layer
  *
