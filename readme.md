@@ -1,8 +1,16 @@
 > The **Daws**on optimized setup for the **ergo**dox mechanical keyboard  
 
-Intended to be compiled within the original project still (in `/keyboards/ergodox/keymaps`).
+## What's ergodox?
+
+A really cool mechanical keyboard. Fully reprogrammable, too. It looks like this:
+
+<img src="ergodox-keyboard.jpg" width="500px"/>
+
+You can get one [here](https://ergodox-ez.com/)
 
 ## Install
+
+Compile within the original qmk_firmware project (in `/keyboards/ergodox/keymaps`).
 
 ```sh
 git clone git@github.com:jackhumbert/qmk_firmware.git
